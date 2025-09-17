@@ -1,1 +1,34 @@
+public class TableAndChairs {
+    public static void main(String[] args) {
+        System.out.println("X                      X");
+        System.out.println("X                      X");
+        System.out.println("X      XXXXXXXXXX      X");
+        System.out.println("XXXXX  X        X  XXXXX");
+        System.out.println("X   X  X        X  X   X");
+        System.out.println("X   X  X        X  X   X");
+    }
+}
 
+public class FavoriteSong {
+    public static void main(String[] args) {
+        System.out.println("Cause you make me feel like");
+        System.out.println("I've been locked out of heaven");
+        System.out.println("For too long, for too long");
+        System.out.println("Yeah, you make me feel like");
+    }
+}
+
+
+import javax.swing.JOptionPane;
+
+public class FirstDialog {
+    public static void main(String[] args) {
+        JOptionPane.showMessageDialog(null, "First Java dialog");
+    }
+}
+
+public class Comments {
+    public static void main(String[] args) {
+               System.out.println("Comments example!");
+    }
+}
