@@ -1,35 +1,40 @@
 import java.util.Scanner;
 
-public class DebugFour3 {
-    public static void main(String args[]) {
-        Scanner input = new Scanner(System.in);
-        int w, l, h;
+public class DebugFour4
+{
+   public static void main(String[] args)
+   {
+      Scanner input = new Scanner(System.in);
+      String destinationCity;
+      String departureCity;
+      String mode;
 
-        System.out.print("Enter width of box >> ");
-        w = input.nextInt();
-        System.out.print("Enter length of box >> ");
-        l = input.nextInt();
-        System.out.print("Enter height of box >> ");
-        h = input.nextInt();
+      DebugTrip trip1;
+      DebugTrip trip2;
+      DebugTrip trip3;
 
-        DebugBox box1 = new DebugBox(w, l, h);
-        DebugBox box2 = new DebugBox(5, 10, 3); 
+      System.out.print("Enter destination city >> ");
+      destinationCity = input.nextLine();
 
-        System.out.println("The dimensions of the first box are");
-        box1.showData();
-        System.out.print("The volume of the first box is ");
-        showVolume(box1);
+      System.out.print("Enter departure city >> ");
+      departureCity = input.nextLine();
 
-        System.out.println("The dimensions of the second box are");
-        box2.showData();
-        System.out.print("The volume of the second box is ");
-        showVolume(box2);
-    }
+      System.out.print("Enter mode of transportation >> ");
+      mode = input.nextLine();
 
-    public static void showVolume(DebugBox aBox) {
-        double vol = aBox.getVolume();
-        System.out.println(vol);
-    }
+      trip1 = new DebugTrip(destinationCity);
+      trip2 = new DebugTrip(destinationCity, departureCity);
+      trip3 = new DebugTrip(destinationCity, departureCity, mode);
+
+      display(trip1);
+      display(trip2);
+      display(trip3);
+   }
+
+   public static void display(DebugTrip trip)
+   {
+      System.out.println("Going to " + trip.getDestination());
+      System.out.println("    Leaving from " + trip.getDepartureCity());
+      System.out.println("    Going by " + trip.getMode());
+   }
 }
-
-
