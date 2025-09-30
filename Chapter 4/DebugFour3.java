@@ -1,40 +1,38 @@
 import java.util.Scanner;
 
-public class DebugFour4
+public class DebugFour3
 {
    public static void main(String[] args)
    {
       Scanner input = new Scanner(System.in);
-      String destinationCity;
-      String departureCity;
-      String mode;
+      int w, l, h;
 
-      DebugTrip trip1;
-      DebugTrip trip2;
-      DebugTrip trip3;
+      System.out.print("Enter width of box >> ");
+      w = input.nextInt();
 
-      System.out.print("Enter destination city >> ");
-      destinationCity = input.nextLine();
+      System.out.print("Enter length of box >> ");
+      l = input.nextInt();
 
-      System.out.print("Enter departure city >> ");
-      departureCity = input.nextLine();
+      System.out.print("Enter height of box >> ");
+      h = input.nextInt();
 
-      System.out.print("Enter mode of transportation >> ");
-      mode = input.nextLine();
+      DebugBox box1 = new DebugBox(); 
+      DebugBox box2 = new DebugBox(w, l, h); 
 
-      trip1 = new DebugTrip(destinationCity);
-      trip2 = new DebugTrip(destinationCity, departureCity);
-      trip3 = new DebugTrip(destinationCity, departureCity, mode);
+      System.out.println("The dimensions of the first box are");
+      box1.showData();
+      System.out.print("  The volume of the first box is ");
+      showVolume(box1);
 
-      display(trip1);
-      display(trip2);
-      display(trip3);
+      System.out.println("The dimensions of the second box are");
+      box2.showData();
+      System.out.print("  The volume of the second box is ");
+      showVolume(box2);
    }
 
-   public static void display(DebugTrip trip)
+   public static void showVolume(DebugBox aBox)
    {
-      System.out.println("Going to " + trip.getDestination());
-      System.out.println("    Leaving from " + trip.getDepartureCity());
-      System.out.println("    Going by " + trip.getMode());
+      double vol = aBox.getVolume();
+      System.out.println(vol);
    }
 }
