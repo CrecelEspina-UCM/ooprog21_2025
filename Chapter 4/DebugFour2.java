@@ -22,13 +22,45 @@ public class DebugFour2
       System.out.println("Default value pen: ");
       display(pen1);
 
-      System.out.println("User value pen: ");
+      System.out.println("User  value pen: ");
       display(pen2);
+
+      input.close();
    }
 
    public static void display(DebugPen p)
    {
       System.out.println("   The pen has ink color " + p.getColor());
       System.out.println("      and a " + p.getPoint() + " point.");
+   }
+}
+
+class DebugPen
+{
+   private String color;
+   private String point;
+
+  r
+   public DebugPen()
+   {
+      color = "blue";
+      point = "medium";
+   }
+
+   // Constructor with parameters
+   public DebugPen(String color, String point)
+   {
+      this.color = color;
+      this.point = point;
+   }
+
+   public String getColor()
+   {
+      return color;
+   }
+
+   public String getPoint()
+   {
+      return point;
    }
 }
