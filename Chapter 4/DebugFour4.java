@@ -29,6 +29,8 @@ public class DebugFour4
       display(trip1);
       display(trip2);
       display(trip3);
+
+      input.close();
    }
 
    public static void display(DebugTrip trip)
@@ -36,5 +38,48 @@ public class DebugFour4
       System.out.println("Going to " + trip.getDestination());
       System.out.println("    Leaving from " + trip.getDepartureCity());
       System.out.println("    Going by " + trip.getMode());
+   }
+}
+
+class DebugTrip
+{
+   private String destination;
+   private String departureCity;
+   private String mode;
+
+   public DebugTrip(String destination)
+   {
+      this.destination = destination;
+      this.departureCity = "Unknown";
+      this.mode = "Unknown";
+   }
+
+   public DebugTrip(String destination, String departureCity)
+   {
+      this.destination = destination;
+      this.departureCity = departureCity;
+      this.mode = "Unknown";
+   }
+
+   public DebugTrip(String destination, String departureCity, String mode)
+   {
+      this.destination = destination;
+      this.departureCity = departureCity;
+      this.mode = mode;
+   }
+
+   public String getDestination()
+   {
+      return destination;
+   }
+
+   public String getDepartureCity()
+   {
+      return departureCity;
+   }
+
+   public String getMode()
+   {
+      return mode;
    }
 }
