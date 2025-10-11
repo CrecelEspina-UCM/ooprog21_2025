@@ -1,4 +1,3 @@
-debugfive 1:
 import java.util.*;
 public class DebugFive1{
     public static void main(String args[]){
