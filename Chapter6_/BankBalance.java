@@ -29,4 +29,3 @@ public class BankBalance {
         input.close();
     }
 }
-g
