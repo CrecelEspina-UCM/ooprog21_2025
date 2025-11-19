@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class DebugSeven1 {
+public class DebugSeven2 {
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);
         String name1, name2, name3;
