@@ -31,7 +31,6 @@ public class DebugSeven2
             }
         }
 
-        // handle the last number after final space
         partStr = str.substring(lastSpace + 1, length);
         num = Integer.parseInt(partStr);
         System.out.println("  " + num);
