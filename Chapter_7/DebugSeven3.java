@@ -19,7 +19,6 @@ public class DebugSeven3
         System.out.println("indexOf('a') is: " + quote.indexOf('a'));
         System.out.println("indexOf('x') is: " + quote.indexOf('x'));
 
-        // Check length before accessing charAt(5) to avoid crashes
         if (quote.length() > 5)
             System.out.println("charAt(5) is: " + quote.charAt(5));
         else
